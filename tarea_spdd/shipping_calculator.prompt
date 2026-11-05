@@ -1,0 +1,31 @@
+
+1. Intención Core (Cual es el valor de negocio que yo quiero)
+    - Desarrollar una clase en python llamada ShippingCalculator,
+    que permita calcular automáticamente el costo final de envío de un pedido.
+
+    - El módulo debe centralizar las reglas de cálculo logístico considerando 
+    el monto total del carrito, el destino del envío y si el cliente seleccionó
+    la modalidad Express.
+
+2. Reglas de Negocio (Lógica Actual)
+    1. El costo base de envío estándar nacional ('NATIONAL') es de **$10.0**.
+    2. Si el total del carrito del cliente es **igual o mayor a $100.0**, el envío base nacional pasa a ser **Gratis ($0.0)**.
+    3. Si el cliente selecciona envío Express (`is_express=True`), se debe sumar un recargo fijo de **$15.0** al costo de envío (incluso si el envío base era gratis).
+    4. Si el destino es Internacional ('INTERNATIONAL'), el costo final del envío (base + express) **se multiplica por 2.0**.
+    5. Cualquier otro destino desconocido debe levantar un error `ValueError`.
+
+3. Interfaces Externas (Entradas, salidas, que librerias y flujos de datos esperados)
+
+
+4. Anti-Metas (Restricciones del Agente)
+    Generar exclusivamente el archivo shipping_calculator.py.
+    No modificar ni generar el archivo original test_shipping.py.
+    No crear archivos adicionales.
+    No implementar clases, interfaces gráficas ni estructuras innecesarias.
+    No utilizar librerías externas.
+    No agregar reglas de negocio que no estén especificadas.
+    No modificar los valores monetarios definidos.
+
+Tarea del agente:
+Lee este canvas de razonamiento y solo genera el codigo de "shipping_calculator.py".
+Omite todo el texto conversacional de tu respuesta.
